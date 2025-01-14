@@ -14,14 +14,14 @@ app.use(cors());
 app.use(bodyP.json());
 app.use(
   '/codemirror-5.65.18',
-  express.static('C:/Users/91749/Desktop/compiler/codemirror-5.65.18')
+  express.static(__dirname + '/codemirror-5.65.18')
 );
 
 app.get("/", function (req, res) {
     compiler.flush(function () {
         console.log("deleted");
     });
-    res.sendFile('C:/Users/91749/Desktop/compiler/index.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.post('/compile', function (req, res) {
