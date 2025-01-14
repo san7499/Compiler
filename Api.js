@@ -8,7 +8,7 @@ const options = { stats: true };
 compiler.init(options);
 
 // Middleware for CORS
-
+app.use(cors());
 
 // Body parser for JSON requests
 app.use(bodyP.json());
