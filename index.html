@@ -27,13 +27,10 @@
                     <label class="visually-hidden" for="autoSizingSelect">Preference</label>
                     <select class="form-select" id="autoSizingSelect">
                       <option selected>Choose...</option>
-                      <option value="Java">Java</option>
-                      <option value="Cpp">Cpp</option>
                       <option value="Python">Python</option>
                     </select>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-success">Coding Sprint</button>
                     <button type="button" id="run" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                         <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
                       </svg></button>
@@ -75,11 +72,7 @@
      
         var option = document.getElementById("autoSizingSelect")
         option.addEventListener("change", function() {
-            if (option.value == "Java") {
-                editor.setOption("mode", "text/x-java")
-            } else if (option.value == "Cpp") {
-                editor.setOption("mode", "text/x-c++src")
-            } else if (option.value == "Python") {
+            if (option.value == "Python") {
                 editor.setOption("mode", "text/x-python")
             }
         });
